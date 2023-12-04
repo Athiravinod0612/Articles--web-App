@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CommentBox</title>
+
+    <style>
+        .cmt {
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+            padding: 2%;
+            margin: 5% 20%;
+        }
+
+        .name {
+            color: black;
+            padding-bottom: 1%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <% commentcnt.reverse().forEach(function(comment){ %>
+        <div class="cmt">
+
+
+            <div class="name">
+                <b>
+                    <%= comment.userid %>
+                </b>
+            </div>
+            <div>
+                <%= comment.comments %>
+            </div>
+
+
+        </div>
+        <% }); %>
+
+</body>
+
+</html>
